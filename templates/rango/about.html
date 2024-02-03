@@ -1,15 +1,14 @@
-<!DOCTYPE html>
+{%extends 'rango/base.html' %}
 {%load static%}
-<html>
-<head>
-<a href="/rango/">Main page</a><br />
-</head>
 
-<body>
-<h1>This tutorial has been put together by {{yourname}}.</h1>
-<div>
-<p>here is the about page.</p>
-<img src="{{MEDIA_URL}}cat.jpg" alt="cat">
-</div>
-</body>
-</html>
+{% block title_block %}
+    About Rango
+{% endblock %}
+
+{% block body_block %}
+    <h1>This tutorial has been put together by {{yourname}}.</h1>
+    <div>
+        <p>here is the about page.</p>
+        <img src="{{MEDIA_URL}}cat.jpg" alt="cat">
+    </div>
+{% endblock %}
